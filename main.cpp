@@ -6,18 +6,10 @@ template <typename T>
 int fill_arr(T* arr, int size) {
     random_device rd;
     mt19937 gen(rd());
+    uniform_int_distribution<int> dist(1, 50);
 
-    if (typeid(T) == typeid(bool)) {
-        uniform_int_distribution<int> bool_dist(0, 1);
-        for (int i = 0; i < size; i++) {
-            arr[i] = bool_dist(gen);
-        }
-    }
-    else {
-        uniform_int_distribution<int> dist(1, 50);
-        for (int i = 0; i < size; i++) {
-            arr[i] = dist(gen);
-        }
+    for (int i = 0; i < size; i++) {
+        arr[i] = dist(gen);
     }
     return 0;
 }
@@ -49,7 +41,7 @@ void sort_arr_down(T* arr, int size) {
 }
 
 template<typename T>
-void sorting(T* arr, int size, bool choice) {
+void sorting(T* arr, int size, bool choice = false) {
     if (choice) {
         sort_arr_down(arr, size);
     }
