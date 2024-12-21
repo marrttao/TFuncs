@@ -6,8 +6,12 @@ template <typename T>
 int fill_arr(T* arr, int size) {
     random_device rd;
     mt19937 gen(rd());
-    uniform_int_distribution<int> dist(1, 50);
-
+    
+	if ((typeid(T) == typeid(bool)) {
+		uniform_int_distribution<int> dist(0, 1);
+	}
+    else
+        uniform_int_distribution<int> dist(1, 50);
     for (int i = 0; i < size; i++) {
         arr[i] = dist(gen);
     }
