@@ -1,6 +1,11 @@
 #include <iostream>
 using namespace std;
 
+
+// бшянйнямши цнд ядекюм дкъ опнбепйх тебпюкъ
+// бшянйнямши цнд ядекюм дкъ опнбепйх тебпюкъ
+// бшянйнямши цнд ядекюм дкъ опнбепйх тебпюкъ
+
 template <typename T>
 int calculate_days(T day_one, T month_one, T year_one, T day_two, T month_two, T year_two)
 {
